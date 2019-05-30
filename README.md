@@ -1,2 +1,6 @@
 # export_yaml
-Export yaml file to environment variables
+
+```
+export YAML_FILE=path_to_yaml
+source $(export.py)
+```

@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import yaml
 import os
 import tempfile
@@ -5,7 +6,7 @@ import tempfile
 file_path = os.environ['YAML_FILE']
 
 with open(file_path) as f:
-    config = yaml.load(f)
+    config = yaml.load(f, Loader=yaml.FullLoader)
 
 fd, path = tempfile.mkstemp()
 
