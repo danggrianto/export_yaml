@@ -1,12 +1,16 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 import yaml
 import os
 import tempfile
+import sys
 
 file_path = os.environ['YAML_FILE']
 
 with open(file_path) as f:
-    config = yaml.load(f, Loader=yaml.FullLoader)
+    if sys.version_info[0] > 2:
+        config = yaml.load(f, Loader=yaml.FullLoader)
+    else:
+        config = yaml.load(f)
 
 fd, path = tempfile.mkstemp()
 

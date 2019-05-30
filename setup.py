@@ -5,8 +5,8 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="export_yaml",
-    version="0.0.1",
-    author="Example Author",
+    version="0.0.2",
+    author="Daniel Anggrianto",
     author_email="d.anggrianto@gmail.com",
     description="Export environment variable from YAML file",
     long_description=long_description,
@@ -16,7 +16,7 @@ setuptools.setup(
     scripts=['export_yaml/export_yaml'],
     install_requires=['pyyaml'],
     classifiers=[
-        "Programming Language :: Python :: 3",
+        "Programming Language :: Python",
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
